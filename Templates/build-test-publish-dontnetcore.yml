@@ -37,13 +37,13 @@ jobs:
       projects: '${{ parameters.testProject }}'
       arguments: '--configuration ${{ parameters.buildConfiguration }}'
 
-  - task: DotNetCoreCLI@2
-    displayName: Publish
-    inputs:
-      command: publish
-      publishWebProjects: false
-      projects: '${{ parameters.project }}'
-      arguments: '--configuration ${{ parameters.buildConfiguration }} --output $(Build.ArtifactStagingDirectory)'
+  # - task: DotNetCoreCLI@2
+  #   displayName: Publish
+  #   inputs:
+  #     command: publish
+  #     publishWebProjects: false
+  #     projects: '${{ parameters.project }}'
+  #     arguments: '--configuration ${{ parameters.buildConfiguration }} --output $(Build.ArtifactStagingDirectory)'
 
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Artifact'
