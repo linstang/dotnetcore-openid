@@ -22,7 +22,7 @@ jobs:
 - template: Templates/build-publish-dotnetcore.yml
 # - template: Templates/build-test-publish-dontnetcore.yml
   parameters:
-    name: BuildWebApp
+    name: BuildWebApp1
     project: '**/TodoListWebApp/*.csproj'
     buildConfiguration: Debug
     artifactName: TodoList.WebApp
