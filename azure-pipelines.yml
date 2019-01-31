@@ -9,7 +9,8 @@ trigger:
     - HELP.md
 
 jobs:
-- template: Templates/build-publish-dotnetcore.yml
+# - template: Templates/build-publish-dotnetcore.yml
+- template: Templates/build-test-publish-dontnetcore.yml
   parameters:
     name: BuildWebApp
     project: '**/TodoListWebApp/*.csproj'
